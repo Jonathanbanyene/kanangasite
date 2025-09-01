@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Galerie — Ville de Kananga</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+    }
+
+    /* Navbar */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #004080;
+      z-index: 1000;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      color: #fff;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+    }
+    .brand img {
+      width: 50px;
+      border-radius: 5px;
+    }
+    .brand h1 {
+      margin-left: 10px;
+      font-size: 1.5rem;
+    }
+    .main-nav {
+      display: flex;
+      gap: 12px;
+    }
+    .main-nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+    .main-nav a.active,
+    .main-nav a:hover {
+      background-color: #0066cc;
+    }
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    /* Main container */
+    main.container {
+      max-width: 1000px;
+      margin: 100px auto 50px;
+      padding: 0 15px;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2.2em;
+      margin-bottom: 10px;
+      color: #004080;
+    }
+    p.intro {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    /* Galerie */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 1001;
+    }
+    .lightbox.active {
+      display: flex;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(255,255,255,0.3);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+    .lightbox-nav span {
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+      padding: 20px;
+      user-select: none;
+    }
+
+    /* Responsive Navbar */
+    @media (max-width: 768px) {
+      .main-nav {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .main-nav.show {
+        display: flex;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="navbar">
+    <div class="brand">
+      <img src="images/drapeau.jpg" alt="Drapeau">
+      <h1>Ville de Kananga</h1>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html">À propos</a>
+      <a href="lieux.html">Lieux</a>
+      <a href="hebergement.html">Hébergement</a>
+      <a href="actualites.html">Actualités</a>
+      <a href="galerie.html" class="active">Galerie</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="hamburger"><i class="fas fa-bars"></i></button>
+  </div>
+</header>
+
+<main class="container">
+  <h2>Galerie Photos</h2>
+  <p class="intro">Découvrez en images les lieux emblématiques et la vie quotidienne à Kananga.</p>
+
+  <section class="gallery">
+    <img src="images/ville.png" alt="Vue de la ville">
+    <img src="images/fleuve.jpg" alt="Fleuve Kasaï">
+    <img src="images/festival.jpg" alt="Festival culturel">
+    <img src="images/sante.jpg" alt="Santé publique">
+  </section>
+</main>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img src="" alt="Image en grand">
+  <div class="lightbox-nav">
+    <span class="prev">&#10094;</span>
+    <span class="next">&#10095;</span>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="lieux.html">Lieux</a></li>
+        <li><a href="hebergement.html">Hébergement</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <p>Email : <a href="mailto:villekananga@gmail.com">villekananga@gmail.com</a></p>
+      <p>Téléphone : +243 000 000 000</p>
+      <p>Adresse : Kananga, RDC</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Nous suivre</h4>
+      <div class="footer-socials">
+        <a href="https://wa.me/243000000000" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:villekananga@gmail.com" target="_blank" title="Gmail"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <small>© 2025 Ville de Kananga — Tous droits réservés. <br>Développé par <strong>Jonathan Banyene</strong></small>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('.main-nav');
+  hamburger.addEventListener('click', () => nav.classList.toggle('show'));
+
+  const galleryImages = document.querySelectorAll('.gallery img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+  const closeBtn = lightbox.querySelector('.lightbox-close');
+  const prevBtn = lightbox.querySelector('.prev');
+  const nextBtn = lightbox.querySelector('.next');
+
+  let currentIndex = 0;
+
+  galleryImages.forEach((img, index) => {
+    img.addEventListener('click', () => {
+      currentIndex = index;
+      showImage();
+      lightbox.classList.add('active');
+    });
+  });
+
+  closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.classList.remove('active'); });
+
+  prevBtn.addEventListener('click', () => { currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length; showImage(); });
+  nextBtn.addEventListener('click', () => { currentIndex = (currentIndex + 1) % galleryImages.length; showImage(); });
+
+  function showImage() {
+    lightboxImg.src = galleryImages[currentIndex].src;
+    lightboxImg.alt = galleryImages[currentIndex].alt;
+  }
+</script>
+</body>
+</html>

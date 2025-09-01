@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ville de Kananga — Accueil</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header>
+  <div class="navbar">
+    <div class="brand">
+      <img src="images/drapeau.jpg" alt="drapeau" class="flag">
+      <h1>Ville de Kananga</h1>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Accueil</a>
+      <a href="apropos.html">À propos</a>
+      <a href="lieux.html">Lieux</a>
+      <a href="hebergement.html">Hébergement</a>
+      <a href="actualites.html">Actualités</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="hamburger"><i class="fas fa-bars"></i></button>
+  </div>
+</header>
+
+<main style="padding-top:80px;">
+  <section class="hero">
+    <div class="hero-inner">
+      <h2>Bienvenue sur le site officiel de Kananga</h2>
+      <p>Couleurs nationales, autorités, et secteurs clés du Kasaï Central.</p>
+    </div>
+  </section>
+
+  <section class="leaders container">
+    <article class="leader-card">
+      <img src="images/president.jpg" alt="Président">
+      <h3>Président de la République</h3>
+      <p>Son Excellence Félix Tshisekedi Tshilombo</p>
+    </article>
+    <article class="leader-card">
+      <img src="images/gouverneur..jpg" alt="Gouverneur">
+      <h3>Gouverneur du Kasaï Central</h3>
+      <p>Joseph‑Moïse Kambulu</p>
+    </article>
+    <article class="leader-card">
+      <img src="images/armoirie.jpg" alt="Armoirie">
+      <h3>Armoiries</h3>
+    </article>
+    <article class="leader-card">
+      <img src="images/drapeau.jpg" alt="drapeau">
+      <h3>Drapeau</h3>
+    </article>
+  </section>
+
+  <section class="secteurs container">
+    <h2>Secteurs clés</h2>
+    <div class="secteurs-grid">
+      <a class="secteur-btn red" href="education.html">Éducation</a>
+      <a class="secteur-btn yellow" href="sante.html">Santé</a>
+      <a class="secteur-btn blue" href="agriculture.html">Agriculture</a>
+      <a class="secteur-btn blue-light" href="peche.html">Pêche</a>
+      <a class="secteur-btn green" href="tourisme.html">Tourisme</a>
+      <a class="secteur-btn gray" href="mines.html">Mines</a>
+      <a class="secteur-btn dark" href="culture.html">Culture</a>
+    </div>
+    <p class="hint">Cliquez un bouton pour ouvrir la page du secteur.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="lieux.html">Lieux</a></li>
+        <li><a href="hebergement.html">Hébergement</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <p>Email : <a href="mailto:villekananga@gmail.com">villekananga@gmail.com</a></p>
+      <p>Téléphone : +243 000 000 000</p>
+      <p>Adresse : Kananga, RDC</p>
+    </div>
+    <div class="footer-column">
+      <h4>Nous suivre</h4>
+      <div class="footer-socials">
+        <a href="https://wa.me/243000000000" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:villekananga@gmail.com" target="_blank" title="Gmail"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <small>© 2025 Ville de Kananga — Tous droits réservés. <br>Développé par <strong>Jonathan Banyene</strong></small>
+  </div>
+</footer>
+
+<script>
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('.main-nav');
+
+// Ouvre/ferme le menu hamburger
+hamburger.addEventListener('click', () => {
+  nav.classList.toggle('show');
+});
+
+// Ferme le menu quand on clique sur un lien
+const navLinks = document.querySelectorAll('.main-nav a');
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if(nav.classList.contains('show')){
+      nav.classList.remove('show');
+    }
+  });
+});
+</script>
+</body>
+</html>

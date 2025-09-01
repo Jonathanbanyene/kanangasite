@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Ville de Kananga</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* ======= Contact Page Styles ======= */
+    main.container {
+      max-width: 900px;
+      margin: 100px auto 30px; /* marge top pour navbar */
+      padding: 30px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #004080;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* Contact Info */
+    .contact-info ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .contact-info li {
+      font-size: 16px;
+    }
+
+    .contact-info i {
+      margin-right: 8px;
+      color: #004080;
+    }
+
+    .contact-info a {
+      text-decoration: none;
+      color: #333;
+      transition: color 0.3s;
+    }
+
+    .contact-info a:hover {
+      color: #004080;
+    }
+
+    /* Formulaire */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: border 0.3s;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border: 1px solid #004080;
+      outline: none;
+    }
+
+    .contact-form button {
+      background: #004080;
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #002f6c;
+    }
+
+    /* ===== Navbar ===== */
+    header {
+      background: #004080;
+      color: #fff;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      height: 60px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand h1 {
+      color: white;
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    .brand .flag {
+      width: 50px;
+      border-radius: 5px;
+    }
+
+    .main-nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+      background-color: #0066cc;
+    }
+
+    /* Hamburger Menu */
+    .hamburger {
+      display: none;
+      font-size: 28px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* ===== Footer ===== */
+    .site-footer {
+      background-color: #004080;
+      color: white;
+      padding: 40px 20px 20px;
+      text-align: center;
+      margin-top: 40px;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-column {
+      flex: 1;
+      min-width: 220px;
+      text-align: left;
+    }
+
+    .footer-column h4 {
+      color: #fff;
+      margin-bottom: 12px;
+      font-size: 18px;
+      border-bottom: 2px solid #ffd400;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .footer-column ul, .footer-column p, .footer-column a {
+      color: #ddd;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .footer-column a:hover {
+      color: #ffd400;
+    }
+
+    .footer-socials {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .footer-socials a {
+      font-size: 24px;
+      color: #ddd;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    .footer-socials a:hover {
+      color: #ffd400;
+      transform: scale(1.2);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid #333;
+      margin-top: 30px;
+      padding-top: 15px;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    /* ===== Responsive ===== */
+    @media(max-width:768px){
+      .main-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #004080;
+        text-align: center;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+      }
+
+      .main-nav.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .contact-info ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .footer-column {
+        text-align: center;
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="navbar">
+      <div class="brand">
+        <img src="images/drapeau.jpg" alt="Drapeau" class="flag">
+        <h1>Ville de Kananga</h1>
+      </div>
+      <button class="hamburger"><i class="fas fa-bars"></i></button>
+      <nav class="main-nav">
+        <a href="index.html">Accueil</a>
+        <a href="apropos.html">À propos</a>
+        <a href="lieux.html">Lieux</a>
+        <a href="hebergement.html">Hébergement</a>
+        <a href="actualites.html">Actualités</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Section Contact -->
+  <main class="container">
+    <h2>Contactez-nous</h2>
+    <p>Vous pouvez nous écrire via ce formulaire ou utiliser nos réseaux sociaux.</p>
+
+    <section class="contact-info">
+      <ul>
+        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/243899000000" target="_blank">+243 899 000 000</a></li>
+        <li><i class="fab fa-facebook"></i> <a href="https://facebook.com/villedekananga" target="_blank">Ville de Kananga</a></li>
+        <li><i class="fas fa-envelope"></i> <a href="mailto:mairiekananga@gmail.com">mairiekananga@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <form class="contact-form">
+      <label for="name">Nom complet</label>
+      <input type="text" id="name" placeholder="Votre nom" required>
+
+      <label for="email">Adresse email</label>
+      <input type="email" id="email" placeholder="exemple@mail.com" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" rows="5" placeholder="Votre message..." required></textarea>
+
+      <button type="submit"><i class="fas fa-paper-plane"></i> Envoyer</button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="apropos.html">À propos</a></li>
+          <li><a href="lieux.html">Lieux</a></li>
+          <li><a href="hebergement.html">Hébergement</a></li>
+          <li><a href="actualites.html">Actualités</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:villekananga@gmail.com">villekananga@gmail.com</a></p>
+        <p><i class="fas fa-phone"></i> +243 000 000 000</p>
+        <p><i class="fas fa-map-marker-alt"></i> Kananga, RDC</p>
+      </div>
+      <div class="footer-column">
+        <h4>Nous suivre</h4>
+        <div class="footer-socials">
+          <a href="https://wa.me/243000000000" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="mailto:villekananga@gmail.com" target="_blank" title="Gmail"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <small>© 2025 Ville de Kananga — Tous droits réservés.<br>
+      Développé par <strong>Jonathan Banyene</strong></small>
+    </div>
+  </footer>
+
+  <!-- Hamburger Script -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.main-nav');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

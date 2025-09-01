@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lieux — Ville de Kananga</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header>
+  <div class="navbar">
+    <div class="brand">
+      <img src="images/drapeau.jpg" alt="Drapeau" class="flag">
+      <h1>Ville de Kananga</h1>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html">À propos</a>
+      <a href="lieux.html" class="active">Lieux</a>
+      <a href="hebergement.html">Hébergement</a>
+      <a href="actualites.html">Actualités</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="hamburger"><i class="fas fa-bars"></i></button>
+  </div>
+</header>
+
+<main class="container" style="padding-top:80px;">
+  <h2>Lieux à visiter</h2>
+  <p>
+    Kananga regorge de sites touristiques et culturels uniques qui témoignent de sa richesse
+    historique et de sa beauté naturelle.
+  </p>
+
+  <section class="cards">
+    <div class="card">
+      <img src="images/marche.jpg" alt="Marché central">
+      <h3>Marché central</h3>
+      <p>Un lieu animé où se rencontrent commerçants et habitants autour de produits locaux.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/cathedrale.jpg" alt="Cathédrale">
+      <h3>Cathédrale Saint-Joseph</h3>
+      <p>Un monument religieux emblématique de la ville, chargé d’histoire et de spiritualité.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/parc.jpg" alt="Parc naturel">
+      <h3>Parc naturel</h3>
+      <p>Un espace vert idéal pour la détente et la découverte de la faune et flore locales.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="lieux.html">Lieux</a></li>
+        <li><a href="hebergement.html">Hébergement</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <p>Email : <a href="mailto:villekananga@gmail.com">villekananga@gmail.com</a></p>
+      <p>Téléphone : +243 000 000 000</p>
+      <p>Adresse : Kananga, RDC</p>
+    </div>
+    <div class="footer-column">
+      <h4>Nous suivre</h4>
+      <div class="footer-socials">
+        <a href="https://wa.me/243000000000" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:villekananga@gmail.com" target="_blank" title="Gmail"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <small>© 2025 Ville de Kananga — Tous droits réservés. <br>Développé par <strong>Jonathan Banyene</strong></small>
+  </div>
+</footer>
+
+<script>
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('.main-nav');
+hamburger.addEventListener('click', () => {
+  nav.classList.toggle('show');
+});
+</script>
+</body>
+</html>

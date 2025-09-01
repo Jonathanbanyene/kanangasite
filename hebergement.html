@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hébergement — Ville de Kananga</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="brand">
+        <img src="images/drapeau.jpg" alt="Drapeau" class="flag">
+        <h1>Ville de Kananga</h1>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Accueil</a>
+        <a href="apropos.html">À propos</a>
+        <a href="lieux.html">Lieux</a>
+        <a href="hebergement.html" class="active">Hébergement</a>
+        <a href="actualites.html">Actualités</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="hamburger"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top:80px;">
+    <h2>Hébergement</h2>
+    <p>
+      Kananga dispose d’hôtels et de structures d’accueil pour les visiteurs nationaux et internationaux.
+    </p>
+
+    <section class="cards">
+      <div class="card">
+        <img src="images/hotel1.jpg" alt="Hôtel du Centre">
+        <h3>Hôtel du Centre</h3>
+        <p>Confort moderne et accueil chaleureux au cœur de la ville.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/hotel2.jpg" alt="Auberge Kasaï">
+        <h3>Auberge Kasaï</h3>
+        <p>Un cadre calme et authentique pour les voyageurs de passage.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/hotel3.jpg" alt="Résidence">
+        <h3>Résidences privées</h3>
+        <p>Options de location pour des séjours prolongés à prix abordable.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <!-- Colonne Navigation -->
+      <div class="footer-column">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="apropos.html">À propos</a></li>
+          <li><a href="lieux.html">Lieux</a></li>
+          <li><a href="hebergement.html">Hébergement</a></li>
+          <li><a href="actualites.html">Actualités</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Colonne Contact -->
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <p>Email : <a href="mailto:villekananga@gmail.com">villekananga@gmail.com</a></p>
+        <p>Téléphone : +243 000 000 000</p>
+        <p>Adresse : Kananga, RDC</p>
+      </div>
+
+      <!-- Colonne Réseaux sociaux -->
+      <div class="footer-column">
+        <h4>Nous suivre</h4>
+        <div class="footer-socials">
+          <a href="https://wa.me/243000000000" target="_blank" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://facebook.com" target="_blank" title="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="mailto:villekananga@gmail.com" target="_blank" title="Gmail">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <small>© 2025 Ville de Kananga — Tous droits réservés. <br>
+      Développé par <strong>Jonathan Banyene</strong></small>
+    </div>
+  </footer>
+
+  <!-- Hamburger Script -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.main-nav');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+
+    // Ferme le menu après clic sur un lien
+    document.querySelectorAll('.main-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('show');
+      });
+    });
+  </script>
+</body>
+</html>

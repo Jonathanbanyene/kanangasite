@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Actualités — Ville de Kananga</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+    }
+
+    /* Navbar */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #004080;
+      color: #fff;
+      z-index: 1000;
+      height: 60px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+    }
+
+    .brand img {
+      width: 50px;
+      border-radius: 5px;
+    }
+
+    .brand h1 {
+      margin-left: 10px;
+      font-size: 1.5rem;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 12px;
+    }
+
+    .main-nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+
+    .main-nav a.active,
+    .main-nav a:hover {
+      background-color: #0066cc;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    /* Main container */
+    main.container {
+      max-width: 1000px;
+      margin: 100px auto 50px;
+      padding: 0 15px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.2em;
+      margin-bottom: 10px;
+      color: #004080;
+    }
+
+    p.intro {
+      text-align: center;
+      font-size: 1.1em;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    /* Actualités cartes */
+    .news {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .news-item {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .news-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .news-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .news-content {
+      padding: 15px;
+    }
+
+    .news-content h3 {
+      margin: 0 0 10px;
+      font-size: 1.3em;
+      color: #004080;
+    }
+
+    .news-content small {
+      display: block;
+      margin-bottom: 10px;
+      color: #666;
+      font-size: 0.9em;
+    }
+
+    .news-content p {
+      margin: 0;
+      color: #333;
+      text-align: justify;
+    }
+
+    /* Responsive Navbar */
+    @media (max-width: 768px) {
+      .main-nav {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .main-nav.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="navbar">
+    <div class="brand">
+      <img src="images/drapeau.jpg" alt="Drapeau">
+      <h1>Ville de Kananga</h1>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html">À propos</a>
+      <a href="lieux.html">Lieux</a>
+      <a href="hebergement.html">Hébergement</a>
+      <a href="actualites.html" class="active">Actualités</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="hamburger"><i class="fas fa-bars"></i></button>
+  </div>
+</header>
+
+<main class="container">
+  <h2>Actualités de Kananga</h2>
+  <p class="intro">Retrouvez ici les dernières nouvelles, événements et annonces officielles.</p>
+
+  <section class="news">
+    <article class="news-item">
+      <img src="images/festival.jpg" alt="Festival culturel">
+      <div class="news-content">
+        <h3>Festival Culturel du Kasaï</h3>
+        <small>Publié le 15 août 2025</small>
+        <p>Un événement unique qui met en valeur la richesse culturelle et artistique de Kananga.</p>
+      </div>
+    </article>
+
+    <article class="news-item">
+      <img src="images/sante.jpg" alt="Santé publique">
+      <div class="news-content">
+        <h3>Nouvel hôpital en construction</h3>
+        <small>Publié le 2 août 2025</small>
+        <p>Un projet pour améliorer l’accès aux soins de santé dans la région du Kasaï Central.</p>
+      </div>
+    </article>
+
+    <article class="news-item">
+      <img src="images/investicement.jpg" alt="Investissement">
+      <div class="news-content">
+        <h3>Investissements dans les infrastructures</h3>
+        <small>Publié le 28 juillet 2025</small>
+        <p>Le gouvernement annonce de nouveaux projets routiers et énergétiques pour soutenir l’économie locale.</p>
+      </div>
+    </article>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="lieux.html">Lieux</a></li>
+        <li><a href="hebergement.html">Hébergement</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <p>Email : <a href="mailto:villekananga@gmail.com">villekananga@gmail.com</a></p>
+      <p>Téléphone : +243 000 000 000</p>
+      <p>Adresse : Kananga, RDC</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Nous suivre</h4>
+      <div class="footer-socials">
+        <a href="https://wa.me/243000000000" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:villekananga@gmail.com" target="_blank" title="Gmail"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <small>© 2025 Ville de Kananga — Tous droits réservés. <br>Développé par <strong>Jonathan Banyene</strong></small>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('.main-nav');
+  hamburger.addEventListener('click', () => nav.classList.toggle('show'));
+</script>
+</body>
+</html>
