@@ -3,53 +3,138 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Mines — Kananga</title>
+  <title>Mines — Ville de Kananga</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    main.container {
+      padding-top: 90px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .mine-hero {
+      background: url("images/mines-hero.jpg") center/cover no-repeat;
+      height: 280px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+      margin-bottom: 40px;
+    }
+    .mine-hero h2 {
+      font-size: 2.5rem;
+      background: rgba(0,0,0,0.4);
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+    .mine-content h3 {
+      color: #0277bd;
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+    .mine-content p {
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+    .mine-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .mine-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .mine-card:hover { transform: translateY(-5px); }
+    .mine-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header small">
-    <div class="container header-inner">
-      <div class="brand">
-        <img src="images/drapeau.jpg" alt="drapeau" class="flag">
-        <h1>Ville de Kananga</h1>
-      </div>
-      <nav class="main-nav">
-        <a href="index.html">Accueil</a>
-        <a href="education.html">Éducation</a>
-        <a href="sante.html">Santé</a>
-        <a href="culture.html">Culture</a>
-        <a href="tourisme.html">Tourisme</a>
-        <a href="agriculture.html">Agriculture</a>
-        <a href="peche.html">Pêche</a>
-        <a href="mines.html" class="active">Mines</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+<header>
+  <div class="navbar">
+    <div class="brand">
+      <img src="images/drapeau.jpg" alt="Drapeau" class="flag">
+      <h1>Ville de Kananga</h1>
     </div>
-  </header>
+    <nav class="main-nav">
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html">À propos</a>
+      <a href="lieux.html">Lieux</a>
+      <a href="hebergement.html">Hébergement</a>
+      <a href="actualites.html">Actualités</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="hamburger"><i class="fas fa-bars"></i></button>
+  </div>
+</header>
 
-  <main class="container page-content">
-    <h2>Mines</h2>
-    <p>La région du Kasaï Central est connue pour ses ressources minières, notamment le diamant.</p>
+<main class="container">
+  <section class="mine-hero">
+    <h2>Secteur Minier à Kananga</h2>
+  </section>
 
-    <section class="cards">
-      <div class="card">
-        <h3>Diamants</h3>
-        <p>Exploitation artisanale et industrielle dans plusieurs zones.</p>
+  <div class="mine-content">
+    <p>
+      Le Kasaï Central, dont Kananga est la capitale, possède un potentiel
+      minier reconnu, notamment pour le diamant industriel et artisanal.
+      L’exploitation minière, encadrée par des réglementations nationales,
+      contribue à l’économie locale tout en nécessitant une gestion durable
+      des ressources et de l’environnement.
+    </p>
+
+    <h3>Ressources principales</h3>
+    <p>
+      Les gisements de diamants, de manganèse et d’or sont les plus connus.
+      L’artisanat minier reste très présent, aux côtés de quelques exploitations
+      semi-industrielles.
+    </p>
+
+    <h3>Initiatives de développement durable</h3>
+    <p>
+      Des programmes provinciaux et ONG accompagnent les coopératives minières
+      pour améliorer la traçabilité, réduire l’impact écologique et favoriser
+      l’emploi local.
+    </p>
+
+    <section class="mine-grid">
+      <div class="mine-card">
+        <img src="images/diamant-kananga.jpg" alt="Diamants bruts">
+        <h4>Diamants de la région</h4>
+        <p>Le Kasaï est historiquement reconnu pour ses diamants
+           artisanaux de qualité.</p>
       </div>
-      <div class="card">
-        <h3>Or et autres minéraux</h3>
-        <p>Présence de gisements secondaires d’or et autres minerais.</p>
+      <div class="mine-card">
+        <img src="images/exploitation-artisanale.jpg" alt="Mine artisanale">
+        <h4>Exploitation artisanale</h4>
+        <p>De nombreux habitants participent à l’extraction manuelle
+           dans le respect de pratiques encadrées.</p>
       </div>
-      <div class="card">
-        <h3>Défis du secteur</h3>
-        <p>Traçabilité, environnement, et sécurité des mineurs.</p>
+      <div class="mine-card">
+        <img src="images/mines-durables.jpg" alt="Programme durable">
+        <h4>Programmes durables</h4>
+        <p>Des initiatives locales visent à protéger
+           l’environnement et améliorer la traçabilité des pierres.</p>
       </div>
     </section>
-  </main>
+  </div>
+</main>
 
-  <footer class="site-footer">
+<footer class="site-footer">
   <div class="footer-container">
-    <!-- Colonne Navigation -->
     <div class="footer-column">
       <h4>Navigation</h4>
       <ul>
@@ -62,39 +147,30 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
-
-    <!-- Colonne Contact -->
     <div class="footer-column">
       <h4>Contact</h4>
       <p>Email : <a href="mailto:villekananga@gmail.com">villekananga@gmail.com</a></p>
-      <p>Téléphone : +243 000 000 000</p>
+      <p>Téléphone : +243 82 60 64 402</p>
       <p>Adresse : Kananga, RDC</p>
     </div>
-
-    <!-- Colonne Réseaux sociaux -->
     <div class="footer-column">
       <h4>Nous suivre</h4>
       <div class="footer-socials">
-        <a href="https://wa.me/243000000000" target="_blank" title="WhatsApp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="https://facebook.com" target="_blank" title="Facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="mailto:villekananga@gmail.com" target="_blank" title="Gmail">
-          <i class="fas fa-envelope"></i>
-        </a>
+        <a href="https://wa.me/243826064402" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:villekananga@gmail.com" target="_blank" title="Gmail"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
   </div>
-
   <div class="footer-bottom">
-    <small>© 2025 Ville de Kananga — Tous droits réservés. <br>
-    Développé par <strong>Jonathan Banyene</strong></small>
+    <small>© 2025 Ville de Kananga — Tous droits réservés. <br>Développé par <strong>Jonathan Banyene</strong></small>
   </div>
 </footer>
 
-<!-- Font Awesome (à mettre dans <head>) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script>
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('.main-nav');
+hamburger.addEventListener('click', () => nav.classList.toggle('show'));
+</script>
 </body>
 </html>

@@ -90,11 +90,21 @@
 </footer>
 
 <script>
-const hamburger = document.querySelector('.hamburger');
-const nav = document.querySelector('.main-nav');
-hamburger.addEventListener('click', () => {
-  nav.classList.toggle('show');
-});
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.main-nav');
+
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
+
+  const navLinks = document.querySelectorAll('.main-nav a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if(navMenu.classList.contains('show')){
+        navMenu.classList.remove('show');
+      }
+    });
+  });
 </script>
 </body>
 </html>

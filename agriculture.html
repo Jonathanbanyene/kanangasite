@@ -3,53 +3,133 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Agriculture — Kananga</title>
+  <title>Agriculture — Ville de Kananga</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    main.container {
+      padding-top: 90px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .agri-hero {
+      background: url("images/agri-hero.jpg") center/cover no-repeat;
+      height: 280px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+      margin-bottom: 40px;
+    }
+    .agri-hero h2 {
+      font-size: 2.5rem;
+      background: rgba(0,0,0,0.4);
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+    .agri-content h3 {
+      color: #2e7d32;
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+    .agri-content p {
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+    .agri-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .agri-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .agri-card:hover { transform: translateY(-5px); }
+    .agri-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header small">
-    <div class="container header-inner">
-      <div class="brand">
-        <img src="images/drapeau.jpg" alt="drapeau" class="flag">
-        <h1>Ville de Kananga</h1>
-      </div>
-      <nav class="main-nav">
-        <a href="index.html">Accueil</a>
-        <a href="education.html">Éducation</a>
-        <a href="sante.html">Santé</a>
-        <a href="culture.html">Culture</a>
-        <a href="tourisme.html">Tourisme</a>
-        <a href="agriculture.html" class="active">Agriculture</a>
-        <a href="peche.html">Pêche</a>
-        <a href="mines.html">Mines</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+<header>
+  <div class="navbar">
+    <div class="brand">
+      <img src="images/drapeau.jpg" alt="Drapeau" class="flag">
+      <h1>Ville de Kananga</h1>
     </div>
-  </header>
+    <nav class="main-nav">
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html">À propos</a>
+      <a href="lieux.html">Lieux</a>
+      <a href="hebergement.html">Hébergement</a>
+      <a href="actualites.html">Actualités</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="hamburger"><i class="fas fa-bars"></i></button>
+  </div>
+</header>
 
-  <main class="container page-content">
-    <h2>Agriculture</h2>
-    <p>L’agriculture est l’une des principales activités économiques du Kasaï Central, avec une production vivrière et commerciale.</p>
+<main class="container">
+  <section class="agri-hero">
+    <h2>Agriculture à Kananga</h2>
+  </section>
 
-    <section class="cards">
-      <div class="card">
-        <h3>Produits cultivés</h3>
-        <p>Manioc, maïs, arachides, riz, etc.</p>
+  <div class="agri-content">
+    <p>
+      L’agriculture constitue l’un des piliers de l’économie de Kananga et de tout le Kasaï Central.
+      Grâce à un climat favorable et à des terres fertiles, la production agricole
+      assure la sécurité alimentaire locale et soutient l’économie régionale.
+    </p>
+
+    <h3>Principales cultures</h3>
+    <p>
+      Les agriculteurs cultivent principalement le maïs, le manioc, l’arachide, le soja
+      ainsi que divers légumes et fruits. Ces produits alimentent les marchés
+      locaux et contribuent à l’exportation vers d’autres provinces.
+    </p>
+
+    <h3>Techniques et initiatives</h3>
+    <p>
+      Des programmes de formation encouragent l’utilisation de techniques durables,
+      l’irrigation améliorée et la mécanisation légère, afin d’augmenter
+      la productivité et de protéger l’environnement.
+    </p>
+
+    <section class="agri-grid">
+      <div class="agri-card">
+        <img src="images/champ-mais.jpg" alt="Champ de maïs">
+        <h4>Culture du maïs</h4>
+        <p>Production majeure, base de l’alimentation locale et source de revenus.</p>
       </div>
-      <div class="card">
-        <h3>Élevage</h3>
-        <p>Petits élevages (volaille, chèvres) et élevage bovin en zones rurales.</p>
+      <div class="agri-card">
+        <img src="images/champ-manioc.jpg" alt="Champ de manioc">
+        <h4>Manioc</h4>
+        <p>Ingrédient clé des plats traditionnels, cultivé dans toutes les communes.</p>
       </div>
-      <div class="card">
-        <h3>Marchés agricoles</h3>
-        <p>Les marchés de Kananga accueillent la vente de produits agricoles chaque jour.</p>
+      <div class="agri-card">
+        <img src="images/legumes.jpg" alt="Production maraîchère">
+        <h4>Maraîchage</h4>
+        <p>Légumes variés pour une alimentation équilibrée et le commerce local.</p>
       </div>
     </section>
-  </main>
+  </div>
+</main>
 
 <footer class="site-footer">
   <div class="footer-container">
-    <!-- Colonne Navigation -->
     <div class="footer-column">
       <h4>Navigation</h4>
       <ul>
@@ -62,39 +142,30 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
-
-    <!-- Colonne Contact -->
     <div class="footer-column">
       <h4>Contact</h4>
       <p>Email : <a href="mailto:villekananga@gmail.com">villekananga@gmail.com</a></p>
-      <p>Téléphone : +243 000 000 000</p>
+      <p>Téléphone : +243 82 60 64 402</p>
       <p>Adresse : Kananga, RDC</p>
     </div>
-
-    <!-- Colonne Réseaux sociaux -->
     <div class="footer-column">
       <h4>Nous suivre</h4>
       <div class="footer-socials">
-        <a href="https://wa.me/243000000000" target="_blank" title="WhatsApp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="https://facebook.com" target="_blank" title="Facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="mailto:villekananga@gmail.com" target="_blank" title="Gmail">
-          <i class="fas fa-envelope"></i>
-        </a>
+        <a href="https://wa.me/243826064402" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:villekananga@gmail.com" target="_blank" title="Gmail"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
   </div>
-
   <div class="footer-bottom">
-    <small>© 2025 Ville de Kananga — Tous droits réservés. <br>
-    Développé par <strong>Jonathan Banyene</strong></small>
+    <small>© 2025 Ville de Kananga — Tous droits réservés. <br>Développé par <strong>Jonathan Banyene</strong></small>
   </div>
 </footer>
 
-<!-- Font Awesome (à mettre dans <head>) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script>
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('.main-nav');
+hamburger.addEventListener('click', () => nav.classList.toggle('show'));
+</script>
 </body>
 </html>

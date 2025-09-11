@@ -3,52 +3,140 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Culture — Kananga</title>
+  <title>Culture — Ville de Kananga</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    main.container {
+      padding-top: 90px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .culture-hero {
+      background: url("images/culture-hero.jpg") center/cover no-repeat;
+      height: 280px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+      margin-bottom: 40px;
+    }
+    .culture-hero h2 {
+      font-size: 2.5rem;
+      background: rgba(0,0,0,0.4);
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+    .culture-content h3 {
+      color: #8e24aa;
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+    .culture-content p {
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+    .culture-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .culture-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .culture-card:hover { transform: translateY(-5px); }
+    .culture-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header small">
-    <div class="container header-inner">
-      <div class="brand">
-        <img src="images/drapeau.jpg" alt="drapeau" class="flag">
-        <h1>Ville de Kananga</h1>
-      </div>
-      <nav class="main-nav">
-        <a href="index.html">Accueil</a>
-        <a href="education.html">Éducation</a>
-        <a href="sante.html">Santé</a>
-        <a href="culture.html" class="active">Culture</a>
-        <a href="tourisme.html">Tourisme</a>
-        <a href="agriculture.html">Agriculture</a>
-        <a href="peche.html">Pêche</a>
-        <a href="mines.html">Mines</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+<header>
+  <div class="navbar">
+    <div class="brand">
+      <img src="images/drapeau.jpg" alt="Drapeau" class="flag">
+      <h1>Ville de Kananga</h1>
     </div>
-  </header>
+    <nav class="main-nav">
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html">À propos</a>
+      <a href="lieux.html">Lieux</a>
+      <a href="hebergement.html">Hébergement</a>
+      <a href="actualites.html">Actualités</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="hamburger"><i class="fas fa-bars"></i></button>
+  </div>
+</header>
 
-  <main class="container page-content">
-    <h2>Culture</h2>
-    <p>La culture du Kasaï Central reflète une grande richesse traditionnelle et artistique.</p>
+<main class="container">
+  <section class="culture-hero">
+    <h2>Culture et Traditions de Kananga</h2>
+  </section>
 
-    <section class="cards">
-      <div class="card">
-        <h3>Musique et danse</h3>
-        <p>Danses traditionnelles, tambours, et rythmes locaux.</p>
+  <div class="culture-content">
+    <p>
+      La ville de Kananga est au cœur de la culture luba du Kasaï Central.
+      Riche en traditions, en danses, en musique et en artisanat,
+      elle représente un patrimoine vivant qui se transmet de génération en génération.
+    </p>
+
+    <h3>Patrimoine et arts</h3>
+    <p>
+      Le peuple Luba-Kasaï est reconnu pour ses sculptures en bois,
+      ses masques rituels et ses objets d’art qui reflètent
+      l’histoire et la spiritualité de la région.
+    </p>
+
+    <h3>Musique et danse</h3>
+    <p>
+      Les tambours, balafons et chants polyphoniques accompagnent
+      les grandes cérémonies, mariages et festivités traditionnelles,
+      offrant un spectacle vibrant et authentique.
+    </p>
+
+    <h3>Festivals et événements</h3>
+    <p>
+      Des festivals culturels, expositions et rencontres artistiques
+      sont organisés régulièrement pour valoriser et promouvoir
+      les talents locaux et la mémoire collective.
+    </p>
+
+    <section class="culture-grid">
+      <div class="culture-card">
+        <img src="images/artisanat-luba.jpg" alt="Artisanat Luba">
+        <h4>Artisanat Luba</h4>
+        <p>Masques, sculptures et objets rituels réalisés à la main par des artistes locaux.</p>
       </div>
-      <div class="card">
-        <h3>Artisanat</h3>
-        <p>Fabrication de paniers, sculptures et objets traditionnels.</p>
+      <div class="culture-card">
+        <img src="images/danse-traditionnelle.jpg" alt="Danse traditionnelle">
+        <h4>Danses traditionnelles</h4>
+        <p>Performances rythmées et colorées qui animent les grandes fêtes de la province.</p>
       </div>
-      <div class="card">
-        <h3>Langues locales</h3>
-        <p>Tshiluba, Lingala et autres dialectes parlés.</p>
+      <div class="culture-card">
+        <img src="images/festival-kananga.jpg" alt="Festival culturel">
+        <h4>Festival Culturel</h4>
+        <p>Événement annuel mettant en lumière la richesse artistique et musicale de Kananga.</p>
       </div>
     </section>
-  </main>
+  </div>
+</main>
+
 <footer class="site-footer">
   <div class="footer-container">
-    <!-- Colonne Navigation -->
     <div class="footer-column">
       <h4>Navigation</h4>
       <ul>
@@ -61,39 +149,30 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
-
-    <!-- Colonne Contact -->
     <div class="footer-column">
       <h4>Contact</h4>
       <p>Email : <a href="mailto:villekananga@gmail.com">villekananga@gmail.com</a></p>
-      <p>Téléphone : +243 000 000 000</p>
+      <p>Téléphone : +243 82 60 64 402</p>
       <p>Adresse : Kananga, RDC</p>
     </div>
-
-    <!-- Colonne Réseaux sociaux -->
     <div class="footer-column">
       <h4>Nous suivre</h4>
       <div class="footer-socials">
-        <a href="https://wa.me/243000000000" target="_blank" title="WhatsApp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="https://facebook.com" target="_blank" title="Facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="mailto:villekananga@gmail.com" target="_blank" title="Gmail">
-          <i class="fas fa-envelope"></i>
-        </a>
+        <a href="https://wa.me/243826064402" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:villekananga@gmail.com" target="_blank" title="Gmail"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
   </div>
-
   <div class="footer-bottom">
-    <small>© 2025 Ville de Kananga — Tous droits réservés. <br>
-    Développé par <strong>Jonathan Banyene</strong></small>
+    <small>© 2025 Ville de Kananga — Tous droits réservés. <br>Développé par <strong>Jonathan Banyene</strong></small>
   </div>
 </footer>
 
-<!-- Font Awesome (à mettre dans <head>) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script>
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('.main-nav');
+hamburger.addEventListener('click', () => nav.classList.toggle('show'));
+</script>
 </body>
 </html>

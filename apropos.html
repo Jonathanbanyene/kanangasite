@@ -7,62 +7,55 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Hamburger pour mobile */
-    .hamburger {
-      display: none;
-      font-size: 28px;
-      background: none;
-      border: none;
+    /* ---- BANNIÈRE ---- */
+    .banner {
+      background: url('images/ville.jpg') center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       color: white;
-      cursor: pointer;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
     }
-
-    @media (max-width: 768px) {
-      .hamburger {
-        display: block;
-      }
-
-      .main-nav {
-        display: none;
-        flex-direction: column;
-        background: #004080;
-        width: 100%;
-        position: absolute;
-        top: 60px; /* sous la navbar */
-        left: 0;
-        text-align: center;
-        z-index: 999;
-      }
-
-      .main-nav.show {
-        display: flex;
-      }
-
-      .main-nav a {
-        margin: 10px 0;
-      }
+    .banner h1 {
+      font-size: 2.5rem;
+      background: rgba(0,64,128,0.6);
+      padding: 15px 25px;
+      border-radius: 10px;
     }
 
     main.container {
-      padding-top: 80px; /* espace pour navbar fixe */
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
     }
 
     main h2 {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       color: #004080;
     }
 
+    main p.intro {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 40px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    /* ---- SECTIONS ---- */
     .cards {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
-      justify-content: space-around;
+      justify-content: center;
+      margin-bottom: 40px;
     }
 
     .card {
       background: white;
-      border-radius: 10px;
+      border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       padding: 20px;
       flex: 1 1 300px;
@@ -88,11 +81,11 @@
       margin-bottom: 10px;
     }
 
-    /* Footer (inchangé) */
+    /* Footer */
     .site-footer {
       background-color: #004080;
       color: white;
-      padding: 15px 0;
+      padding: 30px 15px;
       text-align: center;
       margin-top: 40px;
     }
@@ -139,17 +132,6 @@
       color: #ffcc00;
     }
 
-    .footer-column p,
-    .footer-column a {
-      font-size: 14px;
-      line-height: 1.6;
-      color: #ccc;
-    }
-
-    .footer-column a:hover {
-      color: #ffcc00;
-    }
-
     .footer-socials a {
       font-size: 24px;
       margin-right: 15px;
@@ -192,40 +174,45 @@
   </div>
 </header>
 
+<!-- Bannière -->
+<div class="banner">
+  <h1>À propos de Kananga</h1>
+</div>
+
 <main class="container">
-  <h2>À propos de Kananga</h2>
-  <p>
-    Kananga est la capitale de la province du Kasaï Central en République Démocratique du Congo.
-    C’est une ville riche en histoire, culture et diversité, jouant un rôle majeur dans l’économie
-    et le développement régional.
+  <p class="intro">
+    Kananga est la capitale du <strong>Kasaï Central</strong>, en République Démocratique du Congo.
+    Ville carrefour, riche en histoire et en culture, elle joue un rôle stratégique
+    dans l’économie et le développement régional.
   </p>
 
   <section class="cards">
     <div class="card">
-      <img src="images/historique.jpg" alt="Histoire">
+      <img src="images/cathedrale.jpg" alt="Histoire">
       <h3>Histoire</h3>
-      <p>
-        La ville a connu une évolution marquante depuis l’époque coloniale, devenant un centre administratif
-        et un carrefour commercial important.
-      </p>
+      <p>Anciennement appelée <strong>Luluabourg</strong>, Kananga est devenue un centre administratif majeur
+      dès la période coloniale et a retrouvé son nom après l’indépendance.</p>
     </div>
 
     <div class="card">
       <img src="images/culture.jpg" alt="Culture">
       <h3>Culture</h3>
-      <p>
-        Kananga est reconnue pour sa richesse culturelle : danses traditionnelles, artisanat local,
-        et coutumes transmises de génération en génération.
-      </p>
+      <p>Ville multiculturelle, Kananga est le berceau de danses, coutumes et artisanats
+      transmis de génération en génération, notamment au sein du peuple Luba.</p>
     </div>
 
     <div class="card">
       <img src="images/population.jpg" alt="Population">
       <h3>Population</h3>
-      <p>
-        La ville compte plusieurs centaines de milliers d’habitants, avec une population jeune et dynamique
-        contribuant au développement socio-économique.
-      </p>
+      <p>Avec plusieurs centaines de milliers d’habitants, la population jeune et dynamique
+      contribue activement au développement de la région.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/marche.jpg" alt="Économie">
+      <h3>Économie</h3>
+      <p>L’économie locale repose sur l’agriculture, le commerce et l’artisanat,
+      avec un marché central qui rayonne sur toute la province.</p>
     </div>
   </section>
 </main>
@@ -253,7 +240,7 @@
     <div class="footer-column">
       <h4>Nous suivre</h4>
       <div class="footer-socials">
-        <a href="https://wa.me/24382606402" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://wa.me/243826064402" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
         <a href="mailto:villekananga@gmail.com" target="_blank" title="Gmail"><i class="fas fa-envelope"></i></a>
       </div>

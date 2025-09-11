@@ -3,53 +3,132 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Pêche — Kananga</title>
+  <title>Pêche — Ville de Kananga</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    main.container {
+      padding-top: 90px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .fish-hero {
+      background: url("images/peche-hero.jpg") center/cover no-repeat;
+      height: 280px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+      margin-bottom: 40px;
+    }
+    .fish-hero h2 {
+      font-size: 2.5rem;
+      background: rgba(0,0,0,0.4);
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+    .fish-content h3 {
+      color: #0277bd;
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+    .fish-content p {
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+    .fish-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .fish-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .fish-card:hover { transform: translateY(-5px); }
+    .fish-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header small">
-    <div class="container header-inner">
-      <div class="brand">
-        <img src="images/drapeau.jpg" alt="drapeau" class="flag">
-        <h1>Ville de Kananga</h1>
-      </div>
-      <nav class="main-nav">
-        <a href="index.html">Accueil</a>
-        <a href="education.html">Éducation</a>
-        <a href="sante.html">Santé</a>
-        <a href="culture.html">Culture</a>
-        <a href="tourisme.html">Tourisme</a>
-        <a href="agriculture.html">Agriculture</a>
-        <a href="peche.html" class="active">Pêche</a>
-        <a href="mines.html">Mines</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+<header>
+  <div class="navbar">
+    <div class="brand">
+      <img src="images/drapeau.jpg" alt="Drapeau" class="flag">
+      <h1>Ville de Kananga</h1>
     </div>
-  </header>
+    <nav class="main-nav">
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html">À propos</a>
+      <a href="lieux.html">Lieux</a>
+      <a href="hebergement.html">Hébergement</a>
+      <a href="actualites.html">Actualités</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="hamburger"><i class="fas fa-bars"></i></button>
+  </div>
+</header>
 
-  <main class="container page-content">
-    <h2>Pêche</h2>
-    <p>La pêche est pratiquée dans les rivières et cours d’eau du Kasaï Central, jouant un rôle important dans l’alimentation locale.</p>
+<main class="container">
+  <section class="fish-hero">
+    <h2>Pêche à Kananga</h2>
+  </section>
 
-    <section class="cards">
-      <div class="card">
-        <h3>Zones de pêche</h3>
-        <p>Principales rivières : Lulua, Tshibashi, etc.</p>
+  <div class="fish-content">
+    <p>
+      La pêche occupe une place importante dans l’alimentation et l’économie du Kasaï Central.
+      Les rivières et lacs environnants offrent une grande diversité de poissons,
+      contribuant à la sécurité alimentaire et à la création d’emplois.
+    </p>
+
+    <h3>Zones de pêche</h3>
+    <p>
+      Les principales zones de pêche se situent le long de la rivière Lulua,
+      ainsi que dans plusieurs affluents où abondent des espèces variées.
+    </p>
+
+    <h3>Techniques et pratiques</h3>
+    <p>
+      Les pêcheurs utilisent des filets traditionnels, des nasses et, de plus en plus,
+      des techniques améliorées soutenues par des projets de coopératives locales
+      pour garantir une pêche durable et responsable.
+    </p>
+
+    <section class="fish-grid">
+      <div class="fish-card">
+        <img src="images/peche-artisanale.jpg" alt="Pêche artisanale">
+        <h4>Pêche artisanale</h4>
+        <p>Activité principale des communautés riveraines, respectant souvent les méthodes traditionnelles.</p>
       </div>
-      <div class="card">
-        <h3>Techniques traditionnelles</h3>
-        <p>Utilisation de filets, pièges et pêche artisanale.</p>
+      <div class="fish-card">
+        <img src="images/poissons-frais.jpg" alt="Poissons frais">
+        <h4>Poissons locaux</h4>
+        <p>Tilapia, capitaine et d’autres espèces constituent une source essentielle de protéines.</p>
       </div>
-      <div class="card">
-        <h3>Importance économique</h3>
-        <p>Source de revenus pour de nombreuses familles locales.</p>
+      <div class="fish-card">
+        <img src="images/cooperative-peche.jpg" alt="Coopérative de pêche">
+        <h4>Coopératives</h4>
+        <p>Des associations de pêcheurs œuvrent pour la formation, l’accès au marché et la gestion durable.</p>
       </div>
     </section>
-  </main>
+  </div>
+</main>
 
-  <footer class="site-footer">
+<footer class="site-footer">
   <div class="footer-container">
-    <!-- Colonne Navigation -->
     <div class="footer-column">
       <h4>Navigation</h4>
       <ul>
@@ -62,39 +141,30 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
-
-    <!-- Colonne Contact -->
     <div class="footer-column">
       <h4>Contact</h4>
       <p>Email : <a href="mailto:villekananga@gmail.com">villekananga@gmail.com</a></p>
-      <p>Téléphone : +243 000 000 000</p>
+      <p>Téléphone : +243 82 60 64 402</p>
       <p>Adresse : Kananga, RDC</p>
     </div>
-
-    <!-- Colonne Réseaux sociaux -->
     <div class="footer-column">
       <h4>Nous suivre</h4>
       <div class="footer-socials">
-        <a href="https://wa.me/243000000000" target="_blank" title="WhatsApp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="https://facebook.com" target="_blank" title="Facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="mailto:villekananga@gmail.com" target="_blank" title="Gmail">
-          <i class="fas fa-envelope"></i>
-        </a>
+        <a href="https://wa.me/243826064402" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:villekananga@gmail.com" target="_blank" title="Gmail"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
   </div>
-
   <div class="footer-bottom">
-    <small>© 2025 Ville de Kananga — Tous droits réservés. <br>
-    Développé par <strong>Jonathan Banyene</strong></small>
+    <small>© 2025 Ville de Kananga — Tous droits réservés. <br>Développé par <strong>Jonathan Banyene</strong></small>
   </div>
 </footer>
 
-<!-- Font Awesome (à mettre dans <head>) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script>
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('.main-nav');
+hamburger.addEventListener('click', () => nav.classList.toggle('show'));
+</script>
 </body>
 </html>

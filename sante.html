@@ -3,52 +3,133 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Santé — Kananga</title>
+  <title>Santé — Ville de Kananga</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    main.container {
+      padding-top: 90px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .health-hero {
+      background: url("images/sante-hero.jpg") center/cover no-repeat;
+      height: 280px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+      margin-bottom: 40px;
+    }
+    .health-hero h2 {
+      font-size: 2.5rem;
+      background: rgba(0,0,0,0.4);
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+    .health-content h3 {
+      color: #004080;
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+    .health-content p {
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+    .health-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .health-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .health-card:hover { transform: translateY(-5px); }
+    .health-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header small">
-    <div class="container header-inner">
-      <div class="brand">
-        <img src="images/drapeau.jpg" alt="drapeau" class="flag">
-        <h1>Ville de Kananga</h1>
-      </div>
-      <nav class="main-nav">
-        <a href="index.html">Accueil</a>
-        <a href="education.html">Éducation</a>
-        <a href="sante.html" class="active">Santé</a>
-        <a href="culture.html">Culture</a>
-        <a href="tourisme.html">Tourisme</a>
-        <a href="agriculture.html">Agriculture</a>
-        <a href="peche.html">Pêche</a>
-        <a href="mines.html">Mines</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+<header>
+  <div class="navbar">
+    <div class="brand">
+      <img src="images/drapeau.jpg" alt="Drapeau" class="flag">
+      <h1>Ville de Kananga</h1>
     </div>
-  </header>
+    <nav class="main-nav">
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html">À propos</a>
+      <a href="lieux.html">Lieux</a>
+      <a href="hebergement.html">Hébergement</a>
+      <a href="actualites.html">Actualités</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="hamburger"><i class="fas fa-bars"></i></button>
+  </div>
+</header>
 
-  <main class="container page-content">
-    <h2>Santé</h2>
-    <p>Le secteur de la santé au Kasaï Central comprend les hôpitaux, les centres de santé et les initiatives de santé publique.</p>
+<main class="container">
+  <section class="health-hero">
+    <h2>Santé à Kananga</h2>
+  </section>
 
-    <section class="cards">
-      <div class="card">
-        <h3>Hôpitaux principaux</h3>
-        <p>Exemple : Hôpital provincial de Kananga, hôpitaux confessionnels, etc.</p>
+  <div class="health-content">
+    <p>
+      Le secteur de la santé à Kananga joue un rôle essentiel dans le bien-être de la population.
+      Des hôpitaux de référence aux centres de santé communautaires, les services couvrent
+      la prévention, les soins primaires et les interventions spécialisées.
+    </p>
+
+    <h3>Infrastructures médicales</h3>
+    <p>
+      Kananga dispose de plusieurs structures importantes, dont l’<strong>Hôpital Provincial du Kasaï Central</strong>,
+      des cliniques privées et des centres de santé répartis dans chaque commune,
+      offrant des soins de qualité à la population.
+    </p>
+
+    <h3>Programmes de santé publique</h3>
+    <p>
+      Des campagnes régulières de vaccination, de sensibilisation à l’hygiène et
+      de lutte contre le paludisme et les maladies infectieuses sont menées en partenariat
+      avec le Ministère de la Santé et les ONG locales.
+    </p>
+
+    <section class="health-grid">
+      <div class="health-card">
+        <img src="images/hopital.jpg" alt="Hôpital Provincial">
+        <h4>Hôpital Provincial</h4>
+        <p>Centre de référence pour les soins spécialisés et urgences.</p>
       </div>
-      <div class="card">
-        <h3>Centres de santé</h3>
-        <p>Nombreux centres de santé de quartiers assurent les soins de base.</p>
+      <div class="health-card">
+        <img src="images/centre-sante.jpg" alt="Centre de santé">
+        <h4>Centres de santé</h4>
+        <p>Réseau de soins primaires pour toutes les communes de Kananga.</p>
       </div>
-      <div class="card">
-        <h3>Programmes de vaccination</h3>
-        <p>Campagnes de vaccination régulières pour la population.</p>
+      <div class="health-card">
+        <img src="images/vaccination.jpg" alt="Campagne de vaccination">
+        <h4>Vaccination & Prévention</h4>
+        <p>Programmes de vaccination, sensibilisation à l’hygiène et à la nutrition.</p>
       </div>
     </section>
-  </main>
+  </div>
+</main>
+
 <footer class="site-footer">
   <div class="footer-container">
-    <!-- Colonne Navigation -->
     <div class="footer-column">
       <h4>Navigation</h4>
       <ul>
@@ -61,39 +142,30 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
-
-    <!-- Colonne Contact -->
     <div class="footer-column">
       <h4>Contact</h4>
       <p>Email : <a href="mailto:villekananga@gmail.com">villekananga@gmail.com</a></p>
-      <p>Téléphone : +243 000 000 000</p>
+      <p>Téléphone : +243 82 60 64 402</p>
       <p>Adresse : Kananga, RDC</p>
     </div>
-
-    <!-- Colonne Réseaux sociaux -->
     <div class="footer-column">
       <h4>Nous suivre</h4>
       <div class="footer-socials">
-        <a href="https://wa.me/243000000000" target="_blank" title="WhatsApp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="https://facebook.com" target="_blank" title="Facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="mailto:villekananga@gmail.com" target="_blank" title="Gmail">
-          <i class="fas fa-envelope"></i>
-        </a>
+        <a href="https://wa.me/243826064402" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="mailto:villekananga@gmail.com" target="_blank" title="Gmail"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
   </div>
-
   <div class="footer-bottom">
-    <small>© 2025 Ville de Kananga — Tous droits réservés. <br>
-    Développé par <strong>Jonathan Banyene</strong></small>
+    <small>© 2025 Ville de Kananga — Tous droits réservés. <br>Développé par <strong>Jonathan Banyene</strong></small>
   </div>
 </footer>
 
-<!-- Font Awesome (à mettre dans <head>) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script>
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('.main-nav');
+hamburger.addEventListener('click', () => nav.classList.toggle('show'));
+</script>
 </body>
 </html>
